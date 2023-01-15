@@ -1,0 +1,10 @@
+DirectoryIndex index.php
+Options -Indexes
+
+RewriteEngine On
+RewriteRule ^index.php$ / [QSA,R]
+
+RewriteCond %{HTTP_HOST} ^www.kazuma.host$ [NC]
+RewriteRule ^(.*)$ https://kazuma.host/$1 [R=301,L]
+
+ErrorDocument 404 https://kazuma.host/

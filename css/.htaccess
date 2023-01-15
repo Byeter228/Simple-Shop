@@ -1,0 +1,4 @@
+Options -Indexes
+
+RewriteBase /
+RewriteRule ^(.*)$ https://kazuma.host/ [L,R=301]
